@@ -3,7 +3,7 @@
     "/content/dysonxwa/:/",
     "/content/dysonxwa/configuration:/.helix/config.json",
     "/content/dysonxwa/metadata:/metadata.json",
-    "/content/dysonxwa:/products.json"
+    "/content/dysonxwa/products:/products.json"
   ],
   "includes": [
     "/content/dysonxwa/"
