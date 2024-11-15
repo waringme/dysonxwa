@@ -1,11 +1,10 @@
 {
   "mappings": [
     "/content/dysonxwa/:/",
-    "/content/dysonxwa/configuration:/.helix/config.json",
-    "/content/dysonxwa/metadata:/metadata.json",
     "/content/dysonxwa/products:/products.json",
-    "/content/dysonxwa/redirects:/redirects.json"
-    
+    "/content/dysonxwa/redirects:/redirects.json",
+    "/content/dysonxwa/configuration:/.helix/config.json",
+    "/content/dysonxwa/metadata:/metadata.json"
   ],
   "includes": [
     "/content/dysonxwa/"
