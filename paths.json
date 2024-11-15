@@ -2,7 +2,7 @@
   "mappings": [
     "/content/dysonxwa/:/",
     "/content/dysonxwa/configuration:/.helix/config.json",
-    "/content/dysonxwa/metadata:/metadata.json"
+    "/content/dysonxwa/metadata:/metadata.json",
     "/content/dysonxwa:/tim.json"
   ],
   "includes": [
