@@ -1,32 +1,20 @@
 [
   {
-    "id": "image",
-    "fields": [
-      {
-        "component": "reference",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "text",
-        "name": "imageAlt",
-        "label": "Alt Text"
-      }
-    ]
-  },
-  {
     "id": "title",
     "fields": [
       {
         "component": "text",
-        "name": "title",
-        "label": "Title"
+        "valueType": "string",
+        "name": "jcr:title",
+        "value": "",
+        "label": "Text"
       },
       {
         "component": "select",
-        "name": "titleType",
-        "label": "Title Type",
+        "name": "type",
+        "value": "h1",
+        "label": "Type",
+        "valueType": "string",
         "options": [
           {
             "name": "h1",
@@ -57,27 +45,54 @@
     ]
   },
   {
+    "id": "image",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "fileReference",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "alt",
+        "value": "Default alt",
+        "label": "Alt Text"
+      }
+    ]
+  },
+  {
     "id": "button",
     "fields": [
       {
-        "component": "aem-content",
-        "name": "link",
+        "component": "text",
+        "valueType": "string",
+        "name": "href",
+        "value": "",
         "label": "Link"
       },
       {
         "component": "text",
-        "name": "linkText",
+        "valueType": "string",
+        "name": "text",
+        "value": "",
         "label": "Text"
       },
       {
         "component": "text",
-        "name": "linkTitle",
+        "valueType": "string",
+        "name": "title",
+        "value": "",
         "label": "Title"
       },
       {
         "component": "select",
-        "name": "linkType",
+        "name": "type",
+        "value": "",
         "label": "Type",
+        "valueType": "string",
         "options": [
           {
             "name": "default",
@@ -92,41 +107,6 @@
             "value": "secondary"
           }
         ]
-      }
-    ]
-  },
-  {
-    "id": "section",
-    "fields": [
-      {
-        "component": "multiselect",
-        "name": "style",
-        "label": "Style",
-        "options": [
-          {
-            "name": "Highlight",
-            "value": "highlight"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "card",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
       }
     ]
   },
@@ -160,6 +140,37 @@
     ]
   },
   {
+    "id": "card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "section",
+    "fields": [
+      {
+        "component": "text",
+        "name": "style",
+        "value": "",
+        "label": "Style",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
     "id": "hero",
     "fields": [
       {
@@ -181,6 +192,106 @@
         "name": "text",
         "value": "",
         "label": "Text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "teaser",
+    "fields": [
+        {
+         "component": "reference",
+         "valueType": "string",
+         "name": "image",
+         "label": "Image",
+         "multi": false
+       },    
+       {
+         "component": "text-input",
+         "valueType": "string",
+         "name": "title",
+         "label": "Title",
+         "value": ""
+       },
+       {
+        "component": "text-input",
+        "valueType": "string",
+        "name": "titleType",
+        "label": "Title type",
+        "value": "h2"
+      },
+       {
+         "component": "text-area",
+         "name": "body",
+         "value": "",
+         "label": "Body",
+         "valueType": "string"
+       },
+       {
+        "component": "text-input",
+        "name": "link",
+        "value": "#",
+        "label": "Link",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "name": "linkText",
+        "value": "Learn more",
+        "label": "Link text",
+        "valueType": "string"
+      },
+      {
+        "component": "multiselect",
+        "name": "classes",
+        "value": "",
+        "label": "Styles",
+        "description": "teaser style",
+        "valueType": "string",
+        "options": [
+          {
+            "name": "Light text",
+            "value": "light-text"
+          },
+          {
+            "name": "Light button",
+            "value": "light-button"
+          },
+          {
+            "name": "Dark text",
+            "value": "dark-text"
+          }
+        ]
+      }
+     ]
+  },
+  {
+    "id": "accordion-item",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "accordianLabel",
+        "value": "",
+        "label": "Item Label",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "accordianBody",
+        "value": "",
+        "label": "Item Body",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "product-details",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "sku",
+        "value": "",
+        "label": "SKU",
         "valueType": "string"
       }
     ]

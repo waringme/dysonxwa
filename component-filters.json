@@ -6,6 +6,19 @@
     ]
   },
   {
+    "id": "columns",
+    "components": []
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  },
+  {
     "id": "section",
     "components": [
       "text",
@@ -15,6 +28,9 @@
       "hero",
       "cards",
       "columns",
+      "teaser",
+      "accordion",
+      "product-details",
       "fragment"
     ]
   },
@@ -25,18 +41,9 @@
     ]
   },
   {
-    "id": "columns",
+    "id": "accordion",
     "components": [
-      "column"
-    ]
-  },
-  {
-    "id": "column",
-    "components": [
-      "text",
-      "image",
-      "button",
-      "title"
+      "accordion-item"
     ]
   }
 ]
