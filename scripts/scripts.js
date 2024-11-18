@@ -1,4 +1,5 @@
 import {
+  sampleRUM,
   loadHeader,
   loadFooter,
   decorateButtons,
@@ -98,6 +99,8 @@ async function loadEager(doc) {
     document.body.classList.add('appear');
     await loadSection(main.querySelector('.section'), waitForFirstImage);
   }
+
+  sampleRUM.enhance();
 
   try {
     /* if desktop (proxy for fast connection) or fonts already loaded, load fonts.css */
