@@ -1,20 +1,76 @@
 footer {
-  background-color: var(--light-color);
-  font-size: var(--body-font-size-xs);
+  padding: 2rem;
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
+  font-size: var(--body-font-size-s);
 }
 
-footer .footer > div {
-  margin: auto;
+footer .footer li a {
+  line-height: 300%;
+}
+
+footer .footer a:any-link {
+  color: var(--footer-link-color)
+}
+
+footer .footer a:any-link:hover {
+  color: var(--footer-link-hover-color);
+  text-decoration: none;
+}
+
+footer .footer {
   max-width: 1200px;
-  padding: 40px 24px 24px;
+  margin: auto;  
+}
+
+footer .footer ul {
+  list-style-type: none;  
+  padding-left: 0;
 }
 
 footer .footer p {
   margin: 0;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+footer .footer div div:first-child {
+  grid-area: language; 
+  display: block;
+}
+
+footer .footer div div:nth-child(2) {
+  grid-area: sections;
+}
+
+footer .footer div div:nth-child(3) {
+  grid-area: pages;
+}
+
+footer .footer div div:nth-child(4) {
+  grid-area: terms;
+  display: block;
+  font-size: var(--body-font-size-xs);
+}
+
+@media (width >= 768px) {
+  footer .footer div {
+    display: grid;
+    grid-template-areas:
+      "language language"
+      "sections pages"
+      "terms    terms";
+  }
+
+  footer .footer li a {
+    line-height: 200%;
+  }
+}
+
+@media (width >= 1025px) {
+  footer .footer div {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas:
+      "language sections pages"
+      "null     terms    terms";
   }
 }
